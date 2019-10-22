@@ -25,6 +25,7 @@ def ssl_expiry_datetime(hostname):
 
 url = "https://ostin.com"
 response = urllib2.urlopen(url)
+print(response.read())
 data = json.loads(response.read())
 
 now = datetime.datetime.now()
