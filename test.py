@@ -23,7 +23,7 @@ def ssl_expiry_datetime(hostname):
     # parse the string from the certificate into a Python datetime object
     return datetime.datetime.strptime(ssl_info['notAfter'], ssl_date_fmt)
 
-url = "ostin.com"
+url = "amusementlogic.com"
 
 
 now = datetime.datetime.now()
