@@ -24,13 +24,11 @@ def ssl_expiry_datetime(hostname):
     return datetime.datetime.strptime(ssl_info['notAfter'], ssl_date_fmt)
 
 url = "https://ostin.com"
-response = urllib2.urlopen(url)
-print(response.read())
-data = json.loads(response.read())
+
 
 now = datetime.datetime.now()
-for di in data:
-	o = urlparse(di)
-	expirationDate = ssl_expiry_datetime(o.netloc)
-	delta = expirationDate - now
-	print delta
+
+o = urlparse(di)
+expirationDate = ssl_expiry_datetime(url)
+delta = expirationDate - now
+print delta
