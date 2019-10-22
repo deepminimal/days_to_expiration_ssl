@@ -27,8 +27,6 @@ url = "https://ostin.com"
 
 
 now = datetime.datetime.now()
-
-o = urlparse(di)
 expirationDate = ssl_expiry_datetime(url)
 delta = expirationDate - now
 print delta
