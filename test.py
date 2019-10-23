@@ -29,4 +29,4 @@ url = "amusementlogic.com"
 now = datetime.datetime.now()
 expirationDate = ssl_expiry_datetime(url)
 delta = expirationDate - now
-print delta
+print delta.days
